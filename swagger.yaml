@@ -72,8 +72,12 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Category'
-        '404':
-          description: Categories not found
+        '204':
+          description: no content
+          schema:
+            type: array
+            items:
+              type: integer
   /catalog/{parentCategoryId}/categories:
     get:
       tags:
@@ -97,8 +101,12 @@ paths:
             type: array
             items:
              $ref: '#/definitions/Category'
-        '404':
-          description: Categories not found
+        '204':
+          description: no content
+          schema:
+            type: array
+            items:
+              type: integer
   /products/categories/{categoryId}:
     get:
       tags:
@@ -122,8 +130,12 @@ paths:
             type: array
             items:
               $ref: '#/definitions/ProductList'
-        '404':
-          description: Product not found
+        '204':
+          description: no content
+          schema:
+            type: array
+            items:
+              type: integer
   /products/{productId}/detail/info:
     get:
       tags:
