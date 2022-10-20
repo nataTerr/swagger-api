@@ -3,13 +3,6 @@ info:
   description: 'This is an example of a online store server.'
   version: 1.0.1
   title: Online Store Portal
-  #termsOfService: http://swagger.io/terms/
-  #contact:
- #   email: apiteam@swagger.io
- # license:
-   # name: Apache 2.0
-   # url: http://www.apache.org/licenses/LICENSE-2.0.html
-#host: api
 basePath: /api/v1
 tags:
   - name: site
@@ -151,8 +144,7 @@ definitions:
       name:
         type: string
       price:
-        type: string
-#        format: int32
+        type: number
       images:
         type: array
         items:
@@ -171,8 +163,7 @@ definitions:
       name:
         type: string
       price:
-        type: string
-#        format: int32
+        type: number
       images:
         type: array
         items:
@@ -183,6 +174,10 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/ProductProperties'
+    required:
+      - id
+      - name
+      - price
   Category:
     type: object
     properties:
